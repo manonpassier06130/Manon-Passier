@@ -1,0 +1,207 @@
+
+.project-hero {
+    width: 100%;
+    padding: 90px 4.5% 40px;
+}
+
+.project-number.big {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.project-hero h1 {
+    font-size: clamp(56px, 7vw, 80px);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+.project-hero .project-info {
+    margin-top: 0;
+    font-size: 16px;
+    align-items: flex-end;    
+}
+
+/*GALERIE*/
+
+.gallery {
+    width: 97%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 18px;
+    background-color: #DDD;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.gallery-item.wide {
+    aspect-ratio: 920 / 457;
+}
+
+
+.gallery-item.wide.tall {
+    aspect-ratio: 920 / 503;
+}
+
+
+.gallery-row {
+    display: grid;
+    grid-template-columns: 435fr 454fr;
+    gap: 30px;
+}
+
+.gallery-item.left {
+    aspect-ratio: 435 / 503;
+}
+
+.gallery-item.right {
+    aspect-ratio: 454 / 503;
+}
+
+/*BLOC ABOUT*/
+
+.about-project {
+    margin-top: 60px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 90px 12% 90px 8%;
+    border-radius: 0 28px 28px 28px;
+}
+
+.about-text {
+    display: flex;
+    gap: 14px;
+    max-width: 440px;
+}
+
+.about-text .project-number {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+/* Palette 2 x 2 */
+.palette {
+    display: grid;
+    grid-template-columns: repeat(2, 66px);
+    gap: 14px;
+}
+
+.palette span {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+}
+
+/*BOUTON PREVIOUS PAGE*/
+
+.see-more.previous {
+    margin-top: 40px;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 1024px) {
+
+    .about-content {
+        padding: 60px 6%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .project-hero {
+        padding: 50px 5% 25px;
+    }
+
+    .project-hero h1 {
+        font-size: 48px;
+        margin-bottom: 25px;
+    }
+
+    .project-hero .project-info {
+        font-size: 14px;
+        align-items: flex-start;
+    }
+
+    .gallery {
+        width: 94%;
+        gap: 16px;
+    }
+
+    .gallery-item {
+        border-radius: 12px;
+    }
+
+    .gallery-item.wide {
+        aspect-ratio: 4 / 3;
+    }
+
+    .gallery-item.wide.tall {
+        aspect-ratio: 1 / 1;
+    }
+
+    .gallery-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .gallery-item.left,
+    .gallery-item.right {
+        aspect-ratio: 1 / 1;
+    }
+
+    .about-project {
+        margin-top: 40px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+        padding: 35px 6%;
+    }
+
+    .about-text {
+        max-width: 100%;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .palette {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .palette span {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}
